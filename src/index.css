@@ -61,7 +61,6 @@
 }
 
 #carousel-visagismo, #carousel-cortes {
-  touch-action: pan-y;
   overscroll-behavior-x: contain;
   scroll-snap-stop: always;
 }
