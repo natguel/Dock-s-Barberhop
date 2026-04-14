@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=La+Belle+Aurore&family=Montserrat:wght@300;400&family=Oswald:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-docks-navy: #0F172A;
+  --color-docks-bronze: #A8763E;
+  --color-docks-white: #F1F5F9;
+  --color-docks-border: rgba(168, 118, 62, 0.1);
+
+  --font-oswald: "Oswald", sans-serif;
+  --font-barlow: "Barlow Condensed", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-accent: "La Belle Aurore", cursive;
+}
+
+@layer base {
+  body {
+    @apply bg-docks-navy text-docks-white font-montserrat antialiased;
+  }
+}
+
+/* Custom styles for zero border-radius and industrial look */
+* {
+  border-radius: 0 !important;
+}
+
+.industrial-grid {
+  background-image: linear-gradient(var(--color-docks-border) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, var(--color-docks-border) 0.5px, transparent 0.5px);
+  background-size: 40px 40px;
+}
+
+.border-thin {
+  border-width: 0.5px;
+  border-color: var(--color-docks-border);
+}
+
+.border-b-thin {
+  border-bottom-width: 0.5px;
+  border-color: var(--color-docks-border);
+}
+
+.border-t-thin {
+  border-top-width: 0.5px;
+  border-color: var(--color-docks-border);
+}
+
+.border-y-thin {
+  border-top-width: 0.5px;
+  border-bottom-width: 0.5px;
+  border-color: var(--color-docks-border);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#carousel-visagismo, #carousel-cortes {
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+  scroll-snap-stop: always;
+}
+
+.docks-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-docks-bronze) transparent;
+}
+
+.docks-scrollbar::-webkit-scrollbar {
+  height: 2px;
+}
+
+.docks-scrollbar::-webkit-scrollbar-track {
+  background: rgba(168, 118, 62, 0.05);
+  margin-inline: 1.5rem;
+}
+
+.docks-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--color-docks-bronze);
+}
