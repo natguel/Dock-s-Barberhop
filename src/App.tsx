@@ -241,7 +241,7 @@ export default function App() {
 
         <div className="relative">
           <div 
-            className="flex overflow-x-auto snap-x snap-mandatory docks-scrollbar gap-6 px-6 pb-8 touch-pan-x touch-pan-y" 
+            className="flex overflow-x-auto snap-x snap-mandatory docks-scrollbar gap-6 px-6 pb-8" 
             style={{ 
               WebkitOverflowScrolling: 'touch',
               scrollbarWidth: 'none',
@@ -259,7 +259,7 @@ export default function App() {
                   <img 
                     src={img} 
                     alt="Resultado" 
-                    className="h-[400px] md:h-[500px] w-auto border border-white/10 shadow-2xl select-none user-select-none object-contain transition-transform duration-700 group-hover/item:scale-105"
+                    className="h-[400px] md:h-[500px] w-auto border border-white/10 shadow-2xl object-contain transition-transform duration-700 group-hover/item:scale-105"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-black/10 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center" />
@@ -296,7 +296,7 @@ export default function App() {
 
         <div className="relative">
           <div 
-            className="flex overflow-x-auto snap-x snap-mandatory docks-scrollbar gap-6 px-6 pb-8 touch-pan-x touch-pan-y" 
+            className="flex overflow-x-auto snap-x snap-mandatory docks-scrollbar gap-6 px-6 pb-8" 
             style={{ 
               WebkitOverflowScrolling: 'touch',
               scrollbarWidth: 'none',
@@ -314,7 +314,7 @@ export default function App() {
                   <img 
                     src={img} 
                     alt="Resultado" 
-                    className="h-[400px] md:h-[500px] w-auto border border-white/10 shadow-2xl select-none user-select-none object-contain transition-transform duration-700 group-hover/item:scale-105"
+                    className="h-[400px] md:h-[500px] w-auto border border-white/10 shadow-2xl object-contain transition-transform duration-700 group-hover/item:scale-105"
                     referrerPolicy="no-referrer"
                   />
                 </div>
