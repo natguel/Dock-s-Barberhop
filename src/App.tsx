@@ -74,6 +74,8 @@ export default function App() {
               alt="Logo" 
               className="h-10 w-auto object-contain"
               referrerPolicy="no-referrer"
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
           <div className="flex items-center gap-6">
@@ -106,6 +108,8 @@ export default function App() {
             alt="Ambiente" 
             className="w-full h-full object-cover scale-105"
             referrerPolicy="no-referrer"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-docks-navy" />
         </div>
@@ -229,13 +233,13 @@ export default function App() {
 
         <div className="relative">
           <div 
-            className="flex overflow-x-auto snap-x snap-mandatory docks-scrollbar gap-6 px-6 pb-8" 
+            className="flex overflow-x-auto snap-x snap-mandatory docks-scrollbar gap-6 px-6 pb-8 touch-pan-y" 
             style={{ 
               display: 'flex',
               overflowX: 'auto',
               scrollSnapType: 'x mandatory',
               WebkitOverflowScrolling: 'touch',
-              touchAction: 'pan-x',
+              touchAction: 'pan-x pan-y',
               overscrollBehaviorX: 'contain'
             }}
             id="carousel-visagismo"
@@ -250,7 +254,7 @@ export default function App() {
                   <img 
                     src={img} 
                     alt="Resultado" 
-                    className="h-[400px] md:h-[500px] w-auto border border-white/10 shadow-2xl select-none pointer-events-none object-contain transition-transform duration-700 group-hover/item:scale-105"
+                    className="h-[400px] md:h-[500px] w-auto border border-white/10 shadow-2xl select-none pointer-events-none user-select-none object-contain transition-transform duration-700 group-hover/item:scale-105"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-black/10 opacity-0 group-hover/item:opacity-100 transition-opacity flex items-center justify-center" />
@@ -287,13 +291,13 @@ export default function App() {
 
         <div className="relative">
           <div 
-            className="flex overflow-x-auto snap-x snap-mandatory docks-scrollbar gap-6 px-6 pb-8" 
+            className="flex overflow-x-auto snap-x snap-mandatory docks-scrollbar gap-6 px-6 pb-8 touch-pan-y" 
             style={{ 
               display: 'flex',
               overflowX: 'auto',
               scrollSnapType: 'x mandatory',
               WebkitOverflowScrolling: 'touch',
-              touchAction: 'pan-x',
+              touchAction: 'pan-x pan-y',
               overscrollBehaviorX: 'contain'
             }}
             id="carousel-cortes"
@@ -308,7 +312,7 @@ export default function App() {
                   <img 
                     src={img} 
                     alt="Resultado" 
-                    className="h-[400px] md:h-[500px] w-auto border border-white/10 shadow-2xl select-none pointer-events-none object-contain transition-transform duration-700 group-hover/item:scale-105"
+                    className="h-[400px] md:h-[500px] w-auto border border-white/10 shadow-2xl select-none pointer-events-none user-select-none object-contain transition-transform duration-700 group-hover/item:scale-105"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -439,7 +443,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="inline-block bg-docks-navy text-white px-12 py-6 text-xs font-bold tracking-[0.4em] uppercase hover:bg-white hover:text-docks-navy transition-all duration-500 shadow-2xl"
             >
-              Candidatar-se Agora
+              QUERO FAZER PARTE
             </a>
           </FadeInWhenVisible>
         </div>
@@ -455,6 +459,8 @@ export default function App() {
                 alt="Logo" 
                 className="h-10 w-auto object-contain"
                 referrerPolicy="no-referrer"
+                loading="eager"
+                fetchPriority="high"
               />
             </div>
             <p className="text-[9px] tracking-[0.2em] uppercase opacity-30 max-w-xs leading-relaxed">
