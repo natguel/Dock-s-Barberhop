@@ -3,9 +3,9 @@
 
 @theme {
   --color-docks-navy: #0F172A;
-  --color-docks-bronze: #A8763E;
+  --color-docks-bronze: #C5A059;
   --color-docks-white: #F1F5F9;
-  --color-docks-border: rgba(168, 118, 62, 0.1);
+  --color-docks-border: rgba(197, 160, 89, 0.1);
 
   --font-oswald: "Oswald", sans-serif;
   --font-barlow: "Barlow Condensed", sans-serif;
@@ -61,7 +61,7 @@
 }
 
 #carousel-visagismo, #carousel-cortes {
-  touch-action: pan-x;
+  touch-action: pan-y;
   overscroll-behavior-x: contain;
   scroll-snap-stop: always;
 }
@@ -76,7 +76,7 @@
 }
 
 .docks-scrollbar::-webkit-scrollbar-track {
-  background: rgba(168, 118, 62, 0.05);
+  background: rgba(197, 160, 89, 0.05);
   margin-inline: 1.5rem;
 }
 

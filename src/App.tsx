@@ -115,29 +115,37 @@ export default function App() {
         </div>
         
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <FadeInWhenVisible>
-            <span className="font-accent text-docks-bronze text-[1.2rem] mb-6 block">
-              Estilo que reflete a sua personalidade
-            </span>
-            <h1 className="font-barlow text-4xl md:text-6xl font-bold tracking-tighter uppercase leading-[0.9] mb-6">
-              MOLDANDO ESTILOS <br />
-              <span className="text-docks-bronze">COM MAESTRIA</span>
-            </h1>
-            <p className="font-montserrat text-[10px] md:text-xs tracking-[0.3em] uppercase font-light max-w-xl mx-auto mb-10 opacity-80 leading-relaxed">
-              ESPAÇO VOLTADO PARA ESTUDOS DE IMAGEM MASCULINA NO CORAÇÃO DO CAMBUÍ.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <a 
-                href={DOCKS_ASSETS.booking.geral}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto bg-docks-bronze text-white px-10 py-5 text-xs font-bold tracking-[0.3em] uppercase hover:bg-white hover:text-docks-navy transition-all duration-500 flex items-center justify-center gap-3 group"
-              >
-                Agendar Experiência
-                <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-          </FadeInWhenVisible>
+          <div className="flex justify-center mb-8">
+            <img 
+              src={DOCKS_ASSETS.brand.logo} 
+              alt="Dock's Logo" 
+              className="h-16 md:h-24 w-auto object-contain opacity-90"
+              referrerPolicy="no-referrer"
+              loading="eager"
+              fetchPriority="high"
+            />
+          </div>
+          <span className="font-accent text-docks-bronze text-[1.2rem] mb-6 block">
+            Estilo que reflete a sua personalidade
+          </span>
+          <h1 className="font-barlow text-4xl md:text-6xl font-bold tracking-tighter uppercase leading-[0.9] mb-6">
+            MOLDANDO ESTILOS <br />
+            <span className="text-docks-bronze">COM MAESTRIA</span>
+          </h1>
+          <p className="font-montserrat text-[10px] md:text-xs tracking-[0.3em] uppercase font-light max-w-xl mx-auto mb-10 opacity-80 leading-relaxed">
+            ESPAÇO VOLTADO PARA ESTUDOS DE IMAGEM MASCULINA NO CORAÇÃO DO CAMBUÍ.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a 
+              href={DOCKS_ASSETS.booking.geral}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto bg-docks-bronze text-white px-10 py-5 text-xs font-bold tracking-[0.3em] uppercase hover:bg-white hover:text-docks-navy transition-all duration-500 flex items-center justify-center gap-3 group"
+            >
+              Agendar Experiência
+              <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
         </div>
 
         <motion.div 
@@ -239,7 +247,7 @@ export default function App() {
               overflowX: 'auto',
               scrollSnapType: 'x mandatory',
               WebkitOverflowScrolling: 'touch',
-              touchAction: 'pan-x pan-y',
+              touchAction: 'pan-y',
               overscrollBehaviorX: 'contain'
             }}
             id="carousel-visagismo"
@@ -297,7 +305,7 @@ export default function App() {
               overflowX: 'auto',
               scrollSnapType: 'x mandatory',
               WebkitOverflowScrolling: 'touch',
-              touchAction: 'pan-x pan-y',
+              touchAction: 'pan-y',
               overscrollBehaviorX: 'contain'
             }}
             id="carousel-cortes"
@@ -397,10 +405,14 @@ export default function App() {
             <FadeInWhenVisible key={idx} delay={idx * 0.15}>
               <div className="group text-center">
                 <div className="aspect-[4/5] bg-slate-900 overflow-hidden mb-6 relative border border-white/5">
-                  <img 
+                  <motion.img 
                     src={member.img} 
                     alt={member.name} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                    initial={{ filter: 'grayscale(100%)' }}
+                    whileInView={{ filter: 'grayscale(0%)' }}
+                    viewport={{ amount: 0.7, once: false }}
+                    transition={{ duration: 0.8 }}
+                    className="w-full h-full object-cover md:grayscale md:group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-docks-navy via-transparent to-transparent opacity-60" />
